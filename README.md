@@ -4,8 +4,8 @@ which-native-nodish
 Formerly for-node-webkit.
 
 which-native-nodish is a tool for detecting if a given directory or package is
-contained within a node-webkit/nw.js or atom-shell project, particularly useful for build time applications in native modules, where `nw-gyp` must be used instead of `node-gyp` for nw.js, or a series of flags must be passed for atom-shell.
-It works by finding the root most package.json from the specified directory, and checking it's `engines` property for `node-webkit` or `nw.js` and `atom-shell` properties.
+contained within a node-webkit/nw.js or electron project, particularly useful for build time applications in native modules, where `nw-gyp` must be used instead of `node-gyp` for nw.js, or a series of flags must be passed for electron.
+It works by finding the root most package.json from the specified directory, and checking it's `engines` property for `node-webkit` or `nw.js` and `electron` or `atom-shell` properties.
 
 ##Commandline usage:
 Specify the directory to check against (which-native-nodish will search it's immediate parent and up), or if unspecified, it defaults to the current working directory.
@@ -29,10 +29,10 @@ To find out if the current module resides in a node webkit project:
       // nwVersion is the version of node-webkit/nw.js
     }
     else if (results.asVersion) {
-      // asVersion is the version of atom-shell
+      // asVersion is the version of electron
     }
     else {
-      // Root module doesnt use node webkit or atom-shell 
+      // Root module doesn't use node webkit or electron
     }
   });
 ```

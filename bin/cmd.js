@@ -13,12 +13,12 @@ fnw(directory)
         + results.nwVersion);
       }
       else if (results.asVersion) {
-        console.log("root package at '" + results.root + "' uses atom-shell v"
+        console.log("root package at '" + results.root + "' uses electron v"
         + results.asVersion);
       }
       else {
         console.log("root package at '" + results.root
-        + "' does not use node-webkit/nw.js or atom-shell");
+        + "' does not use node-webkit/nw.js or electron");
       }
     },
     function(err) {
